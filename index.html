@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Weather Forecast Exercise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center">
+        <div class="jumbotron text-center pageheader">
+            <h1>Weather Forecast</h1>      
+            <p>Before you go anywhere, make sure to check the weather :)</p>
+            <div class="d-flex justify-content-center">
+                <div class="container">
+                    <p>Hello There</p>
+                </div>
+                <div class="container button-container">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">
+                            Choose a City<span class="caret"></span></button>
+                            <ul class="dropdown-menu scrollable-menu" role="menu" id="cityMenu">
+                                <a href="#" class="list-group-item active">Amsterdam, Netherlands</a>
+                                <a href="#" class="list-group-item">Ankara, Turkey</a>
+                                <a href="#" class="list-group-item">Ängelholm, Sweden</a>
+                                <a href="#" class="list-group-item">Athens, Greece</a>
+                                <a href="#" class="list-group-item">Belfast, Northern Ireland</a>
+                                <a href="#" class="list-group-item">Barcelona, Spain</a>
+                                <a href="#" class="list-group-item">Berlin, Germany</a>
+                                <a href="#" class="list-group-item">Bern, Switzerland</a>
+                                <a href="#" class="list-group-item">Bilbao, Spain</a>
+                                <a href="#" class="list-group-item">Brussels, Belgium</a>
+                                <a href="#" class="list-group-item">Bucharest, Romania</a>
+                                <a href="#" class="list-group-item">Budapest, Hungary</a>
+                                <a href="#" class="list-group-item">Cardiff, Wales</a>
+                                <a href="#" class="list-group-item">Cologne, Germany</a>
+                                <a href="#" class="list-group-item">Copenhagen, Denmark</a>
+                                <a href="#" class="list-group-item">Cork, Ireland</a>
+                                <a href="#" class="list-group-item">Dublin, Ireland</a>
+                                <a href="#" class="list-group-item">Edinburgh, Scotland</a>
+                                <a href="#" class="list-group-item">Florence, Italy</a>
+                                <a href="#" class="list-group-item">Frankfurt, Germany</a>
+                                <a href="#" class="list-group-item">French Riviera, France</a>
+                                <a href="#" class="list-group-item">Funchal, Portugal</a>
+                                <a href="#" class="list-group-item">Gibraltar, United Kindom</a>
+                                <a href="#" class="list-group-item">Gothenburg, Sweden</a>
+                                <a href="#" class="list-group-item">Hamburg, Germany</a>
+                                <a href="#" class="list-group-item">Helsinki, Finland</a>
+                                <a href="#" class="list-group-item">Ibiza, Spain</a>
+                                <a href="#" class="list-group-item">Kyiv, Ukraine</a>
+                                <a href="#" class="list-group-item">Lillehammer, Norway</a>
+                                <a href="#" class="list-group-item">Lisbon, Portugal</a>
+                                <a href="#" class="list-group-item">London, England</a>
+                                <a href="#" class="list-group-item">Madrid, Spain</a>
+                                <a href="#" class="list-group-item">Mallorca, Spain</a>
+                                <a href="#" class="list-group-item">Manchester, England</a>
+                                <a href="#" class="list-group-item">Marseille, France</a>
+                                <a href="#" class="list-group-item">Maspalomas, Spain</a>
+                                <a href="#" class="list-group-item">Milan, Italy</a>
+                                <a href="#" class="list-group-item">Munich, Germany</a>
+                                <a href="#" class="list-group-item">Naples, Italy</a>
+                                <a href="#" class="list-group-item">Oviedo, Spain</a>
+                                <a href="#" class="list-group-item">Oslo, Norway</a>
+                                <a href="#" class="list-group-item">Paris, France</a>
+                                <a href="#" class="list-group-item">Prague, Czech Republic</a>
+                                <a href="#" class="list-group-item">Reykjavik, Iceland</a>
+                                <a href="#" class="list-group-item">Riga, Latvia</a>
+                                <a href="#" class="list-group-item">Rome, Italy</a>
+                                <a href="#" class="list-group-item">Santa Cruz das Flores, Portugal</a>
+                                <a href="#" class="list-group-item">Santa Cruz de Tenerife, Spain</a>
+                                <a href="#" class="list-group-item">Skye, Scotland</a>
+                                <a href="#" class="list-group-item">Sofia, Bulgaria</a>
+                                <a href="#" class="list-group-item">Stockholm, Sweden</a>
+                                <a href="#" class="list-group-item">Tallinn, Estonia</a>
+                                <a href="#" class="list-group-item">Vienna, Austria</a>
+                                <a href="#" class="list-group-item">Warsaw, Poland</a>
+                                <a href="#" class="list-group-item">York, England</a>
+                                <a href="#" class="list-group-item">Zurich, Switzerland</a>
+                            </ul>
+                        </div>
+                </div>
+                <div class="days-forecast" id="weather-cards-container">
+                    <h2>7-day Forecast</h2>
+                    <ul class="weather-cards">
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( _____ )</h3>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Max Temp: ___ C</h6>
+                            <h6>Min Temp: ___ C</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="fixed-bottom text-right">
+    <p class="copyright-text">© Copyright 2023 _______ </p>
+</footer>
+<script id="csvData" type="text/csv">
+    latitude,longitude,city,country
+    52.367,4.904,Amsterdam,Netherlands
+    39.933,32.859,Ankara,Turkey
+    56.134,12.945,Åstorp,Sweden
+    37.983,23.727,Athens,Greece
+    54.597,-5.93,Belfast,Northern Ireland
+    41.387,2.168,Barcelona,Spain
+    52.52,13.405,Berlin,Germany
+    46.948,7.447,Bern,Switzerland
+    43.263,-2.935,Bilbao,Spain
+    50.847,4.357,Brussels,Belgium
+    47.497,19.04,Bucharest,Romania
+    59.329,18.068,Budapest,Hungary
+    51.483,-3.168,Cardiff,Wales
+    50.937,6.96,Cologne,Germany
+    55.676,12.568,Copenhagen,Denmark
+    51.898,-8.475,Cork,Ireland
+    53.349,-6.26,Dublin,Ireland
+    55.953,-3.188,Edinburgh,Scotland
+    43.7696,11.255,Florence,Italy
+    50.11,8.682,Frankfurt,Germany        
+    43.254,6.637,French Riviera,France
+    32.65,-16.908,Funchal,Portugual
+    36.14,-5.353,Gibraltar,
+    57.708,11.974,Gothenburg,Sweden     
+    53.548,9.987,Hamburg,Germany
+    60.169,24.938,Helsinki,Finland
+    39.02,1.482,Ibiza,Spain
+    50.45,30.523,Kyiv,Ukraine
+    61.115,10.466,Lillehammer,Norway
+    38.722,-9.139,Lisbon,Portugual
+    51.507,-0.127,London,England      
+    40.416,-3.703,Madrid,Spain
+    39.695,3.017,Mallorca,Spain
+    53.48,-2.242,Manchester,England       
+    43.296,5.369,Marseille,France
+    27.76,-15.586,Maspalomas,Spain
+    45.464,9.19,Milan,Italy
+    48.135,11.582,Munich,Germany
+    40.851,14.268,Naples,Italy
+    43.034,-2.417,Oñati,Spain
+    59.913,10.752,Oslo,Norway
+    48.856,2.352,Paris,France
+    50.075,14.437,Prague,Czech Republic
+    64.146,-21.942,Reykjavík,Iceland
+    56.879,24.603,Riga,Latvia
+    41.902,12.496,Rome,Italy
+    39.453,-31.127,Santa Cruz das Flores,Portugual
+    28.463,-16.251,Santa Cruz de Tenerife,Spain
+    57.273,-6.215,Skye,Scotland
+    42.697,23.321,Sofia,Bulgaria
+    59.329,18.068,Stockholm,Sweden
+    59.437,24.753,Tallinn,Estonia
+    18.208,16.373,Vienna,Austria
+    52.229,21.012,Warsaw,Poland
+    53.961,-1.07,York,England
+    47.376,8.541,Zurich,Switzerland
+</script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/master.css">
+</html>
