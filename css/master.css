@@ -22,6 +22,9 @@ footer {
 .button-container {
     margin-top: 40px;
 }
+.btn-group {
+    cursor: pointer;
+}
 .days-forecast h2 {
     margin: 20px 0;
     font-size: 1.5rem;
