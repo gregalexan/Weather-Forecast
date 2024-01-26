@@ -27,7 +27,9 @@ footer {
 }
 .days-forecast h2 {
     margin: 20px 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    text-decoration-line: underline;
 }
 .days-forecast .weather-cards {
     display: flex;
@@ -38,7 +40,7 @@ footer {
     padding: 18px 16px;
     list-style: none;
     width: calc(100% / 7);
-    background: #4c4c4d;
+    background: #282727;
     opacity: .8;
     border-radius: 5px;
 }
