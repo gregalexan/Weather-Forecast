@@ -12,4 +12,5 @@ git clone git@github.com:gregalexan/Weather-Forecast.git
 start ./index.html
 ```
 ### Inside the Website:
+After choosing as city: Athens, Greece
 ![This is what it looks like](https://github.com/gregalexan/Weather-Forecast/blob/main/WeatherForecast1.png)
